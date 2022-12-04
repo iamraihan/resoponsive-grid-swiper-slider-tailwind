@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* slider custom button   */
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: url("../src/images/prev-icon.svg");
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: url("../src/images/right-icon.svg");
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: unset !important;
+  bottom: 300px;
+  position: absolute;
+}
+
+@screen sm {
+  .swiper-button-prev,
+  .swiper-button-next {
+    /* top: unset !important; */
+    bottom: 257px;
+    /* position: absolute; */
+  }
+}
+
+/* custom css for grid  */
+.swiper-grid-column > .swiper-wrapper {
+  flex-direction: unset !important;
+}
+
+/* this line can be write in html too  */
+.swiper-slide {
+  margin-top: 50px !important;
+}
+/* pagination css  */
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: pointer;
+  height: 4px;
+  width: 24px;
+  border-radius: none !important;
+}
+.swiper-pagination-bullet {
+  border-radius: 0 !important;
+}
+.swiper-pagination-bullet-active {
+  background: #ff611e;
+}
